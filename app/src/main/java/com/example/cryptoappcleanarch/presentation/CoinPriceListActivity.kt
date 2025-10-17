@@ -3,8 +3,8 @@ package com.example.cryptoappcleanarch.presentation
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.RecyclerView
 import com.example.cryptoappcleanarch.R
+import com.example.cryptoappcleanarch.databinding.ActivityCoinPrceListBinding
 import com.example.cryptoappcleanarch.presentation.adapters.CoinInfoAdapter
 import com.example.cryptoappcleanarch.domain.CoinInfo
 
@@ -12,9 +12,13 @@ class CoinPriceListActivity : AppCompatActivity() {
 
     private lateinit var viewModel: CoinViewModel
 
+    private val binding by lazy {
+        ActivityCoinPrceListBinding.inflate(layoutInflater)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_coin_prce_list)
+        setContentView(binding.root)
         val adapter = CoinInfoAdapter(this)
         adapter.onCoinClickListener = object : CoinInfoAdapter.OnCoinClickListener {
             override fun onCoinClick(coinPriceInfo: CoinInfo) {
@@ -25,8 +29,7 @@ class CoinPriceListActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
-        val rvCoinPriceList = findViewById<RecyclerView>(R.id.rvCoinPriceList)
-        rvCoinPriceList.adapter = adapter
+        binding.rvCoinPriceList.adapter = adapter
         viewModel = ViewModelProvider(this)[CoinViewModel::class.java]
         viewModel.coinInfoList.observe(this) {
             adapter.coinInfoList = it
