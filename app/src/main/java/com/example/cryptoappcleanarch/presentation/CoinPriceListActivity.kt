@@ -3,7 +3,6 @@ package com.example.cryptoappcleanarch.presentation
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.example.cryptoappcleanarch.R
 import com.example.cryptoappcleanarch.databinding.ActivityCoinPrceListBinding
 import com.example.cryptoappcleanarch.presentation.adapters.CoinInfoAdapter
 import com.example.cryptoappcleanarch.domain.CoinInfo
