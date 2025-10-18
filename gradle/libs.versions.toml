@@ -16,6 +16,7 @@ cardview = "1.0.0"
 retrofitVersion = "2.9.0"
 picassoVersion = "2.71828"
 appcompat = "1.7.1"
+workRuntimeKtx = "2.10.5"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -49,6 +50,7 @@ retrofit-converter = {group = "com.squareup.retrofit2", name = "converter-gson",
 # picasso
 picasso = { group = "com.squareup.picasso", name = "picasso", version.ref = "picassoVersion" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+androidx-work-runtime-ktx = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "workRuntimeKtx" }
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

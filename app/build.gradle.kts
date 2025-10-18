@@ -56,6 +56,7 @@ dependencies {
     // room
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.work.runtime.ktx)
     kapt(libs.androidx.room.compiler)
     // recyclerview
     implementation(libs.androidx.recyclerview)
