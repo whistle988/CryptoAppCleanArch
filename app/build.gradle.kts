@@ -68,6 +68,9 @@ dependencies {
     // picasso
     implementation(libs.picasso)
     implementation(libs.androidx.appcompat)
+    // dagger
+    implementation(libs.dagger)
+    kapt(libs.dagger.compiler)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
